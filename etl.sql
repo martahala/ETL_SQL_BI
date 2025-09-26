@@ -137,8 +137,7 @@ BEGIN
     f.profit
   FROM core.fact_sales f
   JOIN core.dim_customer c ON c.customer_sk = f.customer_sk
-  JOIN core.dim_product p ON p.product_sk = f.product_sk
-  WHERE c.is_current = true;
+  JOIN core.dim_product p ON p.product_sk = f.product_sk;
 END;
 $$;
 
